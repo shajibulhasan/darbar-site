@@ -104,3 +104,112 @@ body {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
 }
+
+/* ---------- Inner page: header band ---------- */
+.page-head {
+  background: var(--green-ink);
+  color: #fff;
+  padding: 2.25rem 0 2.5rem;
+}
+.page-head .breadcrumb { margin-bottom: 1rem; font-size: .95rem; }
+.page-head .breadcrumb a { color: #cfe0d6; text-decoration: none; }
+.page-head .breadcrumb a:hover { color: #f1dca4; }
+.page-head .breadcrumb-item.active { color: #f1dca4; }
+.page-head .breadcrumb-item + .breadcrumb-item::before { color: #8fa89b; }
+.page-head h1 {
+  font-family: "Noto Serif Bengali", serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4.5vw, 2.9rem);
+  line-height: 1.35;
+  margin: 0 0 .5rem;
+}
+.page-head .lead-line { color: #d6e3db; font-size: 1.15rem; margin: 0; }
+
+/* ---------- Inner page: body ---------- */
+.page-body { padding: 3rem 0 4rem; }
+.page-body article { font-size: 1.1rem; line-height: 1.95; max-width: 46rem; }
+.page-body article h2 {
+  font-family: "Noto Serif Bengali", serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--green-deep);
+  margin: 2.5rem 0 .75rem;
+}
+.page-body .intro {
+  font-size: 1.2rem;
+  color: var(--green-ink);
+  padding-left: 1rem;
+  border-left: 3px solid var(--brass);
+}
+
+.salika {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  background: #fff;
+  border: 1px solid #e3dcc6;
+  border-left: 4px solid var(--brass);
+}
+.salika p {
+  font-family: "Noto Serif Bengali", serif;
+  font-size: 1.1rem;
+  line-height: 2;
+  margin: 0 0 .5rem;
+}
+.salika footer { font-size: .95rem; color: #6b6a5c; }
+
+.duty-list { padding-left: 1.25rem; }
+.duty-list li { margin-bottom: .6rem; padding-left: .25rem; }
+.duty-list li::marker { color: var(--brass); }
+
+.note-box {
+  background: #eef3ef;
+  border: 1px solid #c9d8cf;
+  padding: 1.1rem 1.35rem;
+  border-radius: .4rem;
+}
+
+/* ---------- Sidebar ---------- */
+.side-card {
+  background: #fff;
+  border: 1px solid #e3dcc6;
+  border-top: 3px solid var(--green-deep);
+  padding: 1.25rem 1.35rem;
+  margin-bottom: 1.5rem;
+}
+.side-card h3 {
+  font-family: "Noto Serif Bengali", serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--green-deep);
+  margin: 0 0 .9rem;
+}
+.facts { margin: 0; }
+.facts dt { font-weight: 600; color: #6b6a5c; font-size: .95rem; }
+.facts dd { margin: 0 0 .85rem; font-size: 1.05rem; }
+.facts dd:last-child { margin-bottom: 0; }
+
+.structure { list-style: none; margin: 0; padding: 0; }
+.structure .step {
+  position: relative;
+  padding: .8rem 1rem;
+  background: #f3f0e4;
+  border-left: 3px solid var(--brass);
+}
+.structure .step + .step { margin-top: 1.5rem; }
+.structure .step + .step::before {
+  content: "";
+  position: absolute;
+  left: 1.25rem;
+  top: -1.5rem;
+  height: 1.5rem;
+  border-left: 2px solid var(--brass);
+}
+.structure .step-top { background: var(--green-deep); color: #fff; border-left-color: #f1dca4; }
+.structure .step strong { display: block; font-size: 1.05rem; }
+.structure .step span { display: block; font-size: .92rem; opacity: .85; }
+.structure .step ul { margin: .6rem 0 0; padding-left: 1.1rem; font-size: .98rem; }
+
+@media (min-width: 992px) {
+  .page-body aside { position: sticky; top: 6rem; align-self: flex-start; }
+}
